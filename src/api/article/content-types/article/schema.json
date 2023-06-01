@@ -5,19 +5,14 @@
     "singularName": "article",
     "pluralName": "articles",
     "displayName": "Article",
-    "name": "article"
+    "name": "article",
+    "description": ""
   },
   "options": {
-    "increments": true,
-    "timestamps": true,
     "draftAndPublish": true
   },
   "pluginOptions": {},
   "attributes": {
-    "title": {
-      "type": "string",
-      "required": true
-    },
     "description": {
       "type": "text",
       "required": true
@@ -28,7 +23,6 @@
     },
     "slug": {
       "type": "uid",
-      "targetField": "title",
       "required": true
     },
     "category": {
@@ -37,18 +31,21 @@
       "target": "api::category.category",
       "inversedBy": "articles"
     },
-    "image": {
-      "allowedTypes": [
-        "images"
-      ],
-      "type": "media",
-      "multiple": false
-    },
     "author": {
       "type": "relation",
       "relation": "manyToOne",
       "target": "api::writer.writer",
       "inversedBy": "articles"
+    },
+    "hero": {
+      "type": "component",
+      "repeatable": false,
+      "component": "sections.hero"
+    },
+    "seo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.seo"
     }
   }
 }

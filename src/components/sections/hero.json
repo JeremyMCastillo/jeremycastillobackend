@@ -1,14 +1,22 @@
 {
-  "collectionName": "components_decoration_heroes",
+  "collectionName": "components_sections_heroes",
   "info": {
-    "name": "Hero",
-    "icon": "address-card"
+    "displayName": "hero"
   },
   "options": {},
   "attributes": {
+    "image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
     "title": {
-      "type": "string",
-      "required": true
+      "type": "string"
     }
   }
 }
