@@ -1,14 +1,18 @@
 {
   "dependencies": {
     "@strapi/plugin-graphql": "^4.0.0",
-    "@strapi/plugin-i18n": "4.11.1",
-    "@strapi/plugin-users-permissions": "4.11.1",
-    "@strapi/provider-email-nodemailer": "^4.11.1",
-    "@strapi/strapi": "4.11.1",
+    "@strapi/plugin-i18n": "4.15.5",
+    "@strapi/plugin-users-permissions": "4.15.5",
+    "@strapi/provider-email-nodemailer": "^4.15.5",
+    "@strapi/strapi": "4.15.5",
     "better-sqlite3": "8.0.1",
     "lodash.set": "^4.3.2",
     "mime-types": "^2.1.27",
-    "strapi-plugin-comments": "^2.2.11"
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "react-router-dom": "^5.2.0",
+    "strapi-plugin-comments": "^2.2.15",
+    "styled-components": "^5.2.1"
   },
   "name": "backend",
   "private": true,
