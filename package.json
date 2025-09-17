@@ -1,18 +1,15 @@
 {
   "dependencies": {
-    "@strapi/plugin-graphql": "^4.0.0",
-    "@strapi/plugin-i18n": "4.15.5",
-    "@strapi/plugin-users-permissions": "4.15.5",
-    "@strapi/provider-email-nodemailer": "^4.15.5",
-    "@strapi/strapi": "4.15.5",
-    "better-sqlite3": "8.0.1",
+    "@strapi/plugin-graphql": "^5.23.4",
+    "@strapi/plugin-users-permissions": "^5.23.4",
+    "@strapi/strapi": "5.23.4",
+    "better-sqlite3": "11.3.0",
     "lodash.set": "^4.3.2",
     "mime-types": "^2.1.27",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
-    "react-router-dom": "^5.2.0",
-    "strapi-plugin-comments": "^2.2.15",
-    "styled-components": "^5.2.1"
+    "react-router-dom": "^6.0.0",
+    "styled-components": "^6.0.0"
   },
   "name": "backend",
   "private": true,
@@ -30,10 +27,6 @@
   "strapi": {
     "uuid": "5fac299f-e28b-467c-9585-100b6306f15f",
     "template": "@strapi/template-blog@1.0.0"
-  },
-  "engines": {
-    "node": ">=14.19.1 <=18.x.x",
-    "npm": ">=6.0.0"
   },
   "license": "MIT"
 }
