@@ -7,6 +7,17 @@ pipeline{
   }
 
   stages {
+    stage('Setup Node.js') {
+      steps {
+        echo 'Setting up Node.js...'
+        sh '''
+          export NVM_DIR="$HOME/.nvm"
+          nvm install --lts
+          node -v
+          npm -v
+        '''
+      }
+    }
     stage('Build') {
       steps {
         echo 'Building..'
@@ -23,6 +34,18 @@ pipeline{
         sh 'cp -r ./* /var/www/jeremycastillo.com/backend/'
         sh 'pm2 restart all'
       }
+    }
+  }
+  post {
+    always {
+        sh '''
+          which npm || echo "No npm in PATH"
+          which node || echo "No node in PATH"
+          which yarn || echo "No yarn in PATH"
+          ls -l $(which npm) || true
+          whoami
+          echo $PATH
+        '''
     }
   }
 }
