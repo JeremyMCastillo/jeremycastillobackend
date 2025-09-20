@@ -6,10 +6,10 @@ pipeline{
   }
 
   stages {
-    withEnv(['PATH+NODE=/home/jcast/.nvm/versions/node/v22.19.0/bin']) {
-      stage('Build') {
-        steps {
-          echo 'Building..'
+    stage('Build') {
+      steps {
+        echo 'Building..'
+        withEnv(['PATH+NODE=/home/jcast/.nvm/versions/node/v22.19.0/bin']) {
           sh 'npm i -g yarn'
           sh 'yarn'
           sh 'yarn build'
