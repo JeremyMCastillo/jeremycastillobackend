@@ -3,6 +3,7 @@ pipeline{
 
   environment {
     NODE_ENV = 'production'
+    NPM_CONFIG_CACHE = "${WORKSPACE}/.npm"
   }
 
   stages {
