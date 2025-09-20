@@ -1,11 +1,17 @@
 pipeline{
   agent any
+
+  environment {
+    NODE_ENV = 'production'
+  }
+
   stages {
     stage('Build') {
       steps {
         echo 'Building..'
         sh 'yarn'
-        sh 'NODE_ENV=production yarn build'
+        yarn
+        yarn command: 'build'
       }
     }
     stage('Deploy') {
