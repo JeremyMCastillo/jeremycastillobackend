@@ -11,8 +11,9 @@ pipeline{
       steps {
         echo 'Building..'
         withEnv(['PATH+NODE=/home/jcast/.nvm/versions/node/v22.19.0/bin']) {
-          sh 'npx yarn'
-          sh 'npx yarn build'
+          sh 'npm install -g yarn'
+          sh 'yarn'
+          sh 'yarn build'
         }
       }
     }
