@@ -20,8 +20,8 @@ pipeline{
     stage('Deploy') {
       steps {
         echo 'Deploying....'
-        sh 'cp -r ./* /var/www/jeremycastillo.com/backend/'
-        sh 'pm2 restart all'
+        sh 'sudo cp -r ./* /var/www/jeremycastillo.net/backend/'
+        sh 'sudo pm2 restart all'
       }
     }
   }
