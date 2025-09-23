@@ -9,6 +9,10 @@ pipeline{
   stages {
     stage('Build') {
       steps {
+        echo 'Copying project files to workspace...'
+        sh 'sudo cp -r ./* /var/www/jeremycastillo.net/backend/'
+        cd '/var/www/jeremycastillo.net/backend/'
+
         echo 'Building..'
         nvm('22.19.0') {
           sh 'npm install -g yarn'
@@ -20,7 +24,6 @@ pipeline{
     stage('Deploy') {
       steps {
         echo 'Deploying....'
-        sh 'sudo cp -r ./* /var/www/jeremycastillo.net/backend/'
         sh 'sudo pm2 restart all'
       }
     }
